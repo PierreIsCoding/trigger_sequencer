@@ -1,4 +1,4 @@
-# Trigger_sequencer
+# Trigger Sequencer
 
 This Arduino based trigger sequencer is a powerfull eurorack module for rhythmic purposes for any diy synthesiser enthusiast.
 

@@ -78,11 +78,17 @@ void channelButtonHandler(byte index, button type)
     if (type == PRESSED)
     {
         sequencers[selectedSeq]->setShow(false);
+        if(index==selectedSeq){
+            sequencers[selectedSeq]->trigger(true);          
+        }
+        
         selectedSeq = index;
+
+        
         sequencers[selectedSeq]->setShow(true);
         sequencers[selectedSeq]->setEditMode(toggleSwitch.checkIndex(0));
         sequencers[selectedSeq]->showSequence();
-        sequencers[selectedSeq]->trigger(true);
+
     }
     else
     {

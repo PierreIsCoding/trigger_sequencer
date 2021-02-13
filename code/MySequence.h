@@ -121,7 +121,10 @@ void MySequence::showSequence()
         }
         leds->setPixel(7, triggerMode, 1); // show trigger mode
         byte index = stepToIndex(step);
-        leds->setPixel(5, step - index * 8, 1); // show step
+        if(play){
+            leds->setPixel(5, step - index * 8, 1); // show step          
+        }
+
         leds->verticalLine(6, 0, index + 1, 1); // show page
         leds->print();
     }
@@ -160,8 +163,6 @@ void MySequence::stepDOWN()
 
 void MySequence::nextPulse()
 {
-    if (play)
-    {
         pulseCounter++;
         if (pulseCounter >= pulsesPerStep)
         {
@@ -169,7 +170,10 @@ void MySequence::nextPulse()
         }
         if (stepValues[playStep] == 1)
         {
-            digitalWrite(outPin, outPulse->getCurrent());
+            if (play){
+                digitalWrite(outPin, outPulse->getCurrent());              
+            }
+
             outPulse->next();
         }
         else if (stepValues[playStep] > 1) // probability
@@ -191,7 +195,6 @@ void MySequence::nextPulse()
         {
             digitalWrite(outPin, LOW);
         }
-    }
 }
 
 void MySequence::enforceNext()
@@ -396,8 +399,6 @@ void MySequence::trigger(bool value)
         if (triggerMode == 1) // toggle play
         {
             play = !play;
-
-            enforceNext();
         }
         else if (triggerMode == 3) // shift
         {
@@ -408,14 +409,13 @@ void MySequence::trigger(bool value)
         {
             play = true;
             playStep = sequenceLength;
-            enforceNext();
         }
         else if (triggerMode == 5) // burst play
         {
             burstPlay = 2;
             play = true;
             playStep = sequenceLength;
-            enforceNext();
+//            enforceNext();
         }
         else if (triggerMode == 6) // Random 1
         {
@@ -431,6 +431,9 @@ void MySequence::trigger(bool value)
     if (triggerMode == 2)
     {
         play = value;
+    }
+    if(!play){
+       digitalWrite(outPin, LOW);    
     }
 }
 

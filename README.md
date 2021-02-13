@@ -10,7 +10,7 @@ This Arduino based trigger sequencer is a powerfull eurorack module for rhythmic
 - Change length of each trigger
 - Change clock multiplier for each channel
 - Change duty cycle of each output
-- Shift a pattern vertically for steps and horizontally for its probability.
+- Shift a pattern vertically for steps and horizontally for probability.
 - Use the toggle switch for entering "manual edit mode" and edit each note independently
 - Set different gate modes for each channel
 

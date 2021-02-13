@@ -5,7 +5,7 @@ This Arduino based trigger sequencer is a powerfull eurorack module for rhythmic
 ## Features
 - External clock input
 - 3 trigger channels
-- 8x8 led matrix display with vertical step axis and horizontal is probability axis
+- 8x8 led matrix display. Vertical axis displays the steps and horizontal axis displays the probability
 - Create patterns on the fly with build in "euclidean rhythms" generator
 - Change length of each trigger
 - Change clock multiplier for each channel
@@ -18,8 +18,8 @@ This Arduino based trigger sequencer is a powerfull eurorack module for rhythmic
 - Toggle mode. Toggle output on / off.
 - Momentary mode. The channel will only play when gate signal is high
 - Shift mode. Each trigger in signal will shift the sequence downwards
-- Reset mode. Resets the step.
-- Burst mode. Reset the step and play sequence one time.
+- Reset mode. Reset current step.
+- Burst mode. Reset current step and play sequence one time.
 - Random mode 1. Generate random steps (vertical axis)
 - Random mode 2. Change the probability of each step randomly (horizontal axis)
 

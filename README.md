@@ -14,7 +14,7 @@ This Arduino based trigger sequencer is a powerfull eurorack module for rhythmic
 - Use the toggle switch for entering "manual edit mode" and edit each note independently
 - Set different gate modes for each channel
 
-### Gate modes
+### Gate in modes
 - Toggle mode. Toggle output on / off.
 - Momentary mode. The channel will only play when gate signal is high
 - Shift mode. Each trigger in signal will shift the sequence downwards

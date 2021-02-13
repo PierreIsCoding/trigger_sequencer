@@ -15,18 +15,17 @@ This Arduino based trigger sequencer is a powerfull eurorack module for rhythmic
 - Set different gate modes for each channel
 
 ### Gate modes
-- Toggle On / off channel
-- Momentary on / off. The channel will only play when gate signal is high
-- Step shift. Each gate / trigger signal will shift the sequence downwards
-- Step reset
-- Step reset + play one sequence
-- Generate random steps
-- Generate random probality but keep the same steps
+- Toggle mode. Toggle output on / off.
+- Momentary mode. The channel will only play when gate signal is high
+- Shift mode. Each trigger in signal will shift the sequence downwards
+- Reset mode. Resets the step.
+- Burst mode. Reset the step and play sequence one time.
+- Random mode 1. Generate random steps (vertical axis)
+- Random mode 2. Change the probability of each step randomly (horizontal axis)
 
+### Images
 
-More info will follow
-
-<img src="https://raw.githubusercontent.com/PierreIsCoding/trigger_sequencer/main/images/20210212_231106.jpg" width="300" /> <img src="https://raw.githubusercontent.com/PierreIsCoding/trigger_sequencer/main/images/20210212_231030.jpg" width="300" />
+<img src="https://raw.githubusercontent.com/PierreIsCoding/trigger_sequencer/main/images/20210208_215258.jpg" width="300" /> <img src="https://raw.githubusercontent.com/PierreIsCoding/trigger_sequencer/main/images/20210212_231106.jpg" width="300" /> <img src="https://raw.githubusercontent.com/PierreIsCoding/trigger_sequencer/main/images/20210212_231030.jpg" width="300" />
 <img src="https://raw.githubusercontent.com/PierreIsCoding/trigger_sequencer/main/images/20210212_231038.jpg" width="300" />
 
 
